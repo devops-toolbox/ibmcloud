@@ -1,0 +1,27 @@
+---
+# Install ibmcloud packages
+
+- name: unwanted packages are removed
+  package:
+    name: "{{ ibmcloud_packages_remove }}"
+    state: absent
+  become: true
+  when: ibmcloud_remove_packages
+
+- name: prereq repositories are installed
+  package:
+    name: "{{ ibmcloud_packages_repos }}"
+    state: "{{ ibmcloud_packages_state }}"
+  become: true
+
+- name: prereq packages are installed
+  package:
+    name: "{{ ibmcloud_packages_prereq }}"
+    state: "{{ ibmcloud_packages_state }}"
+  become: true
+
+- name: packages are installed
+  package:
+    name: "{{ ibmcloud_packages_install }}"
+    state: "{{ ibmcloud_packages_state }}"
+  become: true
