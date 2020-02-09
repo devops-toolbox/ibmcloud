@@ -8,10 +8,10 @@ ibmcloud: Ibmcloud
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.ibmcloud](https://galaxy.ansible.com/devops-toolbox.ibmcloud)
+[https://galaxy.ansible.com/devopstoolbox.ibmcloud](https://galaxy.ansible.com/devopstoolbox.ibmcloud)
 
 ```bash
-ansible-galaxy install devops-toolbox.ibmcloud
+ansible-galaxy install devopstoolbox.ibmcloud
 ```
 
 Requirements
@@ -60,7 +60,7 @@ Example Playbook
   tasks:
     - name: ibmcloud is configured
       import_role:
-        name: devops-toolbox.ibmcloud
+        name: devopstoolbox.ibmcloud
       vars:
         ibmcloud_packages_state: present
         ibmcloud_remove_packages: true
@@ -89,4 +89,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
